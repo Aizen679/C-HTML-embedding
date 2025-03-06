@@ -1,0 +1,170 @@
+<html>
+  <html lang="en">
+    <head>
+      <title>C Programs using HTML</title>
+      <style>
+        .code {
+          background: rgb(189, 189, 189);
+          border-radius: 5%;
+          color: black;
+          width: 400px;
+          border: 10px dotted rgb(66, 66, 66);
+          padding: 20px;
+          margin: 20px;
+          display: inline-block;
+          vertical-align: top;
+          transition: all 0.4s ease;
+        }
+        .code:hover {
+          transform: scale(0.9);
+          background: linear-gradient(to right, gray, white);
+          border: none;
+          cursor: pointer;
+        }
+
+        body {
+          background: linear-gradient(
+            to right,
+            rgb(2, 138, 156),
+            rgb(107, 2, 168)
+          );
+          margin: 0;
+          min-height: 100vh;
+          overflow-x: hidden;
+        }
+
+        marquee {
+          padding: 40px 0;
+        }
+
+        code {
+          font-family: "Courier New", Courier, monospace;
+          font-size: 14px;
+        }
+        .image {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+          padding: 20px;
+          flex-wrap: nowrap;
+          overflow-x: auto;
+        }
+
+        .image img {
+          width: 350px;
+          height: auto;
+          border-radius: 10px;
+        }
+      </style>
+    </head>
+    <body>
+      <marquee
+        behavior="scroll"
+        direction="left"
+        scrollamount="5"
+        onmouseover="this.stop();"
+        onmouseout="this.start();"
+      >
+        <div class="code">
+          <code>
+            <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int num;
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+    
+    if (num % 2 == 0) {
+        printf("%d is even.\n", num);
+    } else {
+        printf("%d is odd.\n", num);
+    }
+    return 0;
+}
+          </pre
+            >
+          </code>
+        </div>
+
+        <div class="code">
+          <code>
+            <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int num;
+    printf("Enter any integer number: ");
+    scanf("%d", &num);
+    
+    if (num > 0) {
+        printf("%d is positive.\n", num);
+    } else if (num < 0) {
+        printf("%d is negative.\n", num);
+    } else {
+        printf("The number is zero.\n");
+    }
+    return 0;
+}
+          </pre
+            >
+          </code>
+        </div>
+
+        <div class="code">
+          <code>
+            <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+    char day[9];
+    printf("Enter day of week: ");
+    scanf("%s", day);
+    strupr(day);
+    
+    if (strcmp(day, "SATURDAY") == 0 ||
+     strcmp(day, "SUNDAY") == 0) {
+        printf("Holiday.\n");
+    } else {
+        printf("Working day.\n");
+    }
+    return 0;
+}
+          </pre
+            >
+          </code>
+        </div>
+
+        <div class="code">
+          <code>
+            <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    
+    if (num % 3 == 0 && num % 7 == 0) {
+        printf("Divisible by 3 and 7.\n");
+    } else {
+        printf("Not divisible by 3 and 7.\n");
+    }
+    return 0;
+}
+          </pre
+            >
+          </code>
+        </div>
+      </marquee>
+      <div class="image">
+        <img src="Img/1.png" alt="Output 1" />
+        <img src="Img/2.png" alt="Output 2" />
+        <img src="Img/3.png" alt="Output 3" />
+        <img src="Img/4.png" alt="Output 4" />
+      </div>
+    </body>
+  </html>
+</html>
